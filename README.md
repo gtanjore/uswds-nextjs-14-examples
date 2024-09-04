@@ -14,8 +14,10 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 #How to use uswds-react icons
 
-Example:
+#Example:
+```
 import {Icon} from "@trussworks/react-uswds";
 <Icon.AttachMoney aria-hidden="true" />
 <Icon.AccessibilityNew aria-hidden="true" />
 <Icon.Search aria-hidden="true" />
+```
