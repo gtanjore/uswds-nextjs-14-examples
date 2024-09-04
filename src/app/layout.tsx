@@ -7,13 +7,7 @@ import "./globals.css";
 import "@uswds/uswds/css/uswds.min.css";
 import "@trussworks/react-uswds/lib/index.css";
 import {
-  ExtendedNav,
   GovBanner,
-  Header,
-  NavMenuButton,
-  PrimaryNav,
-  Search,
-  Title,
 } from "@trussworks/react-uswds";
 import AppHeader from "./ui/components/AppHeader";
 import AppFooter from "./ui/components/AppFooter";
