@@ -1,6 +1,22 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Link from "next/link";
+import Image from "next/image";
+
 import "./globals.css";
+import "@uswds/uswds/css/uswds.min.css";
+import "@trussworks/react-uswds/lib/index.css";
+import {
+  ExtendedNav,
+  GovBanner,
+  Header,
+  NavMenuButton,
+  PrimaryNav,
+  Search,
+  Title,
+} from "@trussworks/react-uswds";
+import AppHeader from "./ui/components/AppHeader";
+import AppFooter from "./ui/components/AppFooter";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +32,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <GovBanner />
+        <AppHeader />
+            {children}
+        <AppFooter />
+      </body>
     </html>
   );
 }
