@@ -18,7 +18,7 @@ import "@uswds/uswds/css/uswds.min.css";
 import "@trussworks/react-uswds/lib/index.css";
 ```
 
-#uswds-react icons?
+#uswds-react icons
 ```
 import {Icon} from "@trussworks/react-uswds";
 <Icon.AttachMoney aria-hidden="true" />
