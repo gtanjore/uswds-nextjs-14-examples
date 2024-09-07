@@ -1,6 +1,7 @@
+'use client'
 import Image from "next/image";
 import styles from "./page.module.css";
-import { GridContainer } from "@trussworks/react-uswds";
+import { GridContainer, Icon } from "@trussworks/react-uswds";
 
 export default function Home() {
   return (
@@ -10,7 +11,8 @@ export default function Home() {
           <div className="usa-hero__callout">
             <h1 className="usa-hero__heading">
               <span className="usa-hero__heading--alt">Hero callout:</span>
-              Bring attention to a project priority
+              Bring attention to a project priority 
+              <Icon.AttachMoney aria-hidden="true" />
             </h1>
             <p>
               Support the callout with some short explanatory text. You don’t
