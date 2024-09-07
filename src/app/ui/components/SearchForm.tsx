@@ -29,7 +29,7 @@ function SearchForm() {
                 <h1 className="margin-bottom-0">Search</h1>
                 <Form className="usa-form--large" onSubmit={mockSubmit}>
                   <Fieldset legend="Get started with Search.">
-                    <p className="usa-hint">
+                    <div className="usa-hint">
                       <abbr
                         title="required"
                         className="usa-hint usa-hint--required"
@@ -37,7 +37,7 @@ function SearchForm() {
                         *
                       </abbr>{" "}
                       indicates a required field.
-                    </p>
+                    </div>
                     <Label htmlFor="input-select">Search Reason</Label>
                     <Select id="input-select" name="input-select">
                       <option>- Select - </option>
@@ -83,7 +83,9 @@ function SearchForm() {
                         *
                       </abbr>
                     </Label>
-                    <div className="usa-hint" id="gnHint">For example March 30, 1965</div>
+                    <div className="usa-hint" id="gnHint">
+                      For example March 30, 1965
+                    </div>
                     <DateInputGroup>
                       <FormGroup className="usa-form-group--month usa-form-group--select">
                         <Label htmlFor="input-select">Month</Label>
@@ -135,6 +137,15 @@ function SearchForm() {
                         this will look different
                       </option>
                     </Select>
+                    <Label htmlFor="input-type-text">
+                      ID Card Number
+                    </Label>
+                    <TextInput
+                      className="border-radius-4"
+                      id="input-type-text"
+                      name="input-type-text"
+                      type="text"
+                    />
                     <div className="justify-content-right">
                       <Button type="button">Click Me</Button>
                       <Button type="button" base>
