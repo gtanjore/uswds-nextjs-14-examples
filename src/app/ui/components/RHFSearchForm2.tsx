@@ -17,12 +17,13 @@ import {
 } from "@trussworks/react-uswds";
 
 interface IFormInput {
+  searchreason: string;
   firstName: string;
   lastName: string;
-  searchType: string;
-  month: string;
-  day: number;
-  year: number;
+  gender: string;
+  dobmonth: string;
+  dobday: number;
+  dobyear: number;
   placeofbirth: string;
   idcardnumber: string;
 }
@@ -36,7 +37,6 @@ function RHFSearchForm2() {
     defaultValues: {
       firstName: "",
       lastName: "",
-
     },
   });
 
@@ -67,9 +67,8 @@ function RHFSearchForm2() {
                       indicates a required field.
                     </div>
                     <Label htmlFor="input-select">Search Reason</Label>
-
                     <Controller
-                      name="searchType"
+                      name="searchreason"
                       control={control}
                       render={({ field }) => (
                         <Select id={field.name} {...field}>
@@ -106,6 +105,19 @@ function RHFSearchForm2() {
                         <TextInput type="text" id="{field.name}" {...field} />
                       )}
                     />
+                    <Label htmlFor="input-select">Gender</Label>
+                    <Controller
+                      name="gender"
+                      control={control}
+                      render={({ field }) => (
+                        <Select id={field.name} {...field}>
+                          <option value="">Select</option>
+                          <option value="male">Male</option>
+                          <option value="female">Female</option>
+                          <option value="genderx">GenderX</option>
+                        </Select>
+                      )}
+                    />
                     <Label htmlFor="dateofbirth">
                       Date of Birth{" "}
                       <abbr title="required" className="usa-label--required">
@@ -119,7 +131,7 @@ function RHFSearchForm2() {
                       <FormGroup className="usa-form-group--month usa-form-group--select">
                         <Label htmlFor="input-select">Month</Label>
                         <Controller
-                          name="month"
+                          name="dobmonth"
                           control={control}
                           render={({ field }) => (
                             <Select id={field.name} {...field}>
@@ -141,7 +153,7 @@ function RHFSearchForm2() {
                         />
                       </FormGroup>
                       <Controller
-                        name="day"
+                        name="dobday"
                         control={control}
                         render={({ field }) => (
                           <DateInput
@@ -155,7 +167,7 @@ function RHFSearchForm2() {
                         )}
                       />
                       <Controller
-                        name="year"
+                        name="dobyear"
                         control={control}
                         render={({ field }) => (
                           <DateInput
@@ -191,10 +203,8 @@ function RHFSearchForm2() {
                       )}
                     />
                     <div className="justify-content-right">
-                      <Button type="button">Click Me</Button>
-                      <Button type="button" base>
-                        Click Me
-                      </Button>
+                      <Button type="reset">Reset</Button>
+                      <Button type="submit">Search</Button>
                     </div>
                   </Fieldset>
                 </Form>

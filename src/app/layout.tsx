@@ -12,6 +12,7 @@ import {
 } from "@trussworks/react-uswds";
 import AppHeader from "./ui/components/AppHeader";
 import AppFooter from "./ui/components/AppFooter";
+import AppHeaderSimple from "./ui/components/AppHeaderSimple";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -29,7 +30,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <GovBanner />
-        <AppHeader />
+        <AppHeaderSimple />
             {children}
         {/* <AppFooter /> */}
       </body>
