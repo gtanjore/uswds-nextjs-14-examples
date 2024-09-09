@@ -4,6 +4,7 @@ import { useForm, Controller, SubmitHandler } from "react-hook-form";
 
 import {
   Button,
+  ButtonGroup,
   DateInput,
   DateInputGroup,
   Fieldset,
@@ -45,7 +46,7 @@ function RHFSearchForm2() {
   };
 
   return (
-    <div>
+    <>
       <div className="bg-base-lightest">
         <GridContainer className="usa-section">
           <Grid row className="margin-x-neg-205 flex-justify-center">
@@ -203,8 +204,10 @@ function RHFSearchForm2() {
                       )}
                     />
                     <div className="justify-content-right">
-                      <Button type="reset">Reset</Button>
-                      <Button type="submit">Search</Button>
+                      <ButtonGroup>
+                        <Button type="reset">Reset</Button>
+                        <Button type="submit">Search</Button>
+                      </ButtonGroup>
                     </div>
                   </Fieldset>
                 </Form>
@@ -213,7 +216,7 @@ function RHFSearchForm2() {
           </Grid>
         </GridContainer>
       </div>
-    </div>
+    </>
   );
 }
 

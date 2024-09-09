@@ -20,7 +20,7 @@ function mockSubmit() {
 
 function SearchForm() {
   return (
-    <div>
+    <>
       <div className="bg-base-lightest">
         <GridContainer className="usa-section">
           <Grid row className="margin-x-neg-205 flex-justify-center">
@@ -159,7 +159,7 @@ function SearchForm() {
           </Grid>
         </GridContainer>
       </div>
-    </div>
+    </>
   );
 }
 

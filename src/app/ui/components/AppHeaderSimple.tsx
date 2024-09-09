@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import {
   Button,
   Header,
@@ -17,35 +18,34 @@ interface HeaderProps {
 
 function AppHeaderSimple() {
   const projectName = "Project Name";
-  const projectLogo = "logo.png";
+  const projectLogo = "/logo.png";
+
+  const testItemsMenu = [
+    <Link href="/" key="one" className="usa-nav__link">
+      <span className="text-white">Home</span>
+    </Link>,
+    <Link href="/search" key="two" className="usa-nav__link">
+      <span className="text-white">Search</span>
+    </Link>,
+    <Link href="/rhfsearch" key="three" className="usa-nav__link">
+      <span className="text-white">RHF Search</span>
+    </Link>,
+  ];
+
   return (
     <>
-      <header className="usa-header usa-header--basic bg-primary-darker">
-        <div className="usa-navbar">
-          <div
-            className="usa-logo"
-            id="basic-logo"
-            style={{
-              display: "flex",
-              alignItems: "center",
-              paddingLeft: "20px",
-            }}
-          >
-            <img
-              className="usa-header__logo-img usa-logo__img"
-              src={projectLogo}
-              alt={projectName}
-              style={{ width: "40px", height: "40px"}}
-            />
-            <span
-              className="usa-header__logo-text text-primary-light"
-              style={{ marginLeft: "10px" }}
-            >
-              {projectName}
-            </span>
+      <Header
+        className="usa-header usa-header--basic bg-primary-darker"
+        basic={true}
+      >
+        <div className="usa-nav-container bg-primary-darker">
+          <div className="usa-navbar grid-row text-white">
+            <Title className="grid-col flex-2">Project Title</Title>
+            <NavMenuButton label="Menu" />
           </div>
+          <PrimaryNav items={testItemsMenu}></PrimaryNav>
         </div>
-      </header>
+      </Header>
     </>
   );
 }
