@@ -56,8 +56,8 @@ function SearchForm() {
                       </abbr>
                     </Label>
                     <TextInput
-                      id="lastname"
-                      name="lastname"
+                      id="firstname"
+                      name="firstname"
                       type="text"
                       autoCapitalize="off"
                       autoCorrect="off"
