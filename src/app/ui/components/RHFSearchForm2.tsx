@@ -34,7 +34,7 @@ function mockSubmit() {
 }
 
 function RHFSearchForm2() {
-  const { control, handleSubmit } = useForm<IFormInput>({
+  const { control, formState: { errors }, handleSubmit } = useForm<IFormInput>({
     defaultValues: {
       firstName: "",
       lastName: "",
@@ -89,10 +89,13 @@ function RHFSearchForm2() {
                     <Controller
                       name="firstName"
                       control={control}
+                      rules={{ required: true }}
                       render={({ field }) => (
                         <TextInput type="text" id="{field.name}" {...field} />
                       )}
                     />
+                    {errors.firstName?.type === 'required' && <p className="text-red" role="alert">First name is required</p>}
+
                     <Label htmlFor="lastname">
                       Last Name{" "}
                       <abbr title="required" className="usa-label--required">
@@ -102,10 +105,13 @@ function RHFSearchForm2() {
                     <Controller
                       name="lastName"
                       control={control}
+                      rules={{ required: true }}
                       render={({ field }) => (
                         <TextInput type="text" id="{field.name}" {...field} />
                       )}
                     />
+                    {errors.lastName?.type === 'required' && <p className="text-red" role="alert">Last name is required</p>}
+
                     <Label htmlFor="input-select">Gender</Label>
                     <Controller
                       name="gender"
