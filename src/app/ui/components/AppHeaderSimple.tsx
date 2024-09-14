@@ -30,7 +30,10 @@ function AppHeaderSimple() {
     <Link href="/rhfsearch" key="three" className="usa-nav__link">
       <span className="text-white">RHF Search</span>
     </Link>,
-  ];
+    <Link href="/search2" key="three" className="usa-nav__link">
+    <span className="text-white">Search 2</span>
+  </Link>,
+];
 
   return (
     <>
